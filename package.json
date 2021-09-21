@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
     "debug": "set DEBUG=minecraft-protocol && nodemon ./src/index.ts",
     "start": "nodemon ./src/index.ts"
   },
