@@ -1,0 +1,23 @@
+{
+  "name": "fakeserver",
+  "version": "1.0.0",
+  "description": "Fake minecraft server",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "set DEBUG=minecraft-protocol && nodemon ./src/index.ts",
+    "start": "nodemon ./src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minecraft-data": "^2.93.0",
+    "minecraft-protocol": "^1.26.5",
+    "node-fetch": "^2.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.4",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
