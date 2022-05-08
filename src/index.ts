@@ -54,10 +54,11 @@ server.playerCount = 1200;
 // getPlayerCount().then(res => {
 //     server.playerCount = res
 // })
+const kickMessage = {text: parseColors(kickString)}
+const kickObject = { reason: JSON.stringify(kickMessage) }
 
 server.on('login', function(client) {
-    const kickMessage = {text: parseColors(kickString)}
-    client.write('kick_disconnect', { reason: JSON.stringify(kickMessage) });
+    client.write('kick_disconnect', kickObject);
     console.log(`[${dayjs().format("DD.MM.YYYY HH:MM")}]: ${client.username} (${client.uuid}) tried to connect!`)
 });
 
