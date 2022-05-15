@@ -59,7 +59,7 @@ const kickObject = { reason: JSON.stringify(kickMessage) }
 
 server.on('login', function(client) {
     client.write('kick_disconnect', kickObject);
-    console.log(`[${dayjs().format("DD.MM.YYYY HH:MM")}]: ${client.username} (${client.uuid}) tried to connect!`)
+    console.log(`[${dayjs().format("DD.MM.YYYY HH:mm")}]: ${client.username} (${client.uuid}) tried to connect!`)
 });
 
 server.on('error', (err) => {
